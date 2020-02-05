@@ -67,7 +67,7 @@
             </li>
           </ul>
           <span class="navbar-text">
-            <a data-toggle="modal" data-target="#loginModal">
+            <a id="loginBtn">
               <span class="fa fa-sign-in"></span> Login</a
             >
           </span>
@@ -135,7 +135,7 @@
     </div>
     <!-- Modal of form -->
 
-    <div class="modal fade" role="dialog" id="button87">
+    <div class="modal fade" role="dialog" id="reserveTableM">
       <div class="modal-dialog modal-lg" role="content">
         <div class="modal-content">
           <div class="modal-header">
@@ -288,10 +288,9 @@
           <div class="col-12 col-sm-3 align-self-center">
             <a
               type="button"
-              data-toggle="modal"
-              data-target="#button87"
+              id="reserveTableBtn"
               class="btn nav-link btn-block btn-warning btn-lg btn-block"
-              >Reserve</a
+              ><span class="fa fa-table"></span> Reserve</a
             >
           </div>
         </div>
@@ -560,6 +559,14 @@
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
             });
+       $('#loginBtn').click(function() {
+         $("#loginModal").modal();
+       });
+
+       $('#reserveTableBtn').click(function() {
+         $("#reserveTableM").modal();
+       });
+
         });
      
     
